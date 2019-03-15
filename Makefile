@@ -8,12 +8,12 @@ BINDIR?= $(PREFIX)/bin
 
 CC=gcc
 
-all: $(EXEC)
+all: config.h $(EXEC)
 
 config.h: config.h.def
 	cp config.h.def config.h
 
-catwm: config.h catwm.o
+catwm: catwm.o
 	$(CC) $(LDFLAGS) -Os -o $@ $+ $(LDADD)
 
 install: all
