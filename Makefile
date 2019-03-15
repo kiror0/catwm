@@ -3,7 +3,7 @@ LDADD+= -lX11
 LDFLAGS=
 EXEC=catwm
 
-PREFIX?= /usr
+PREFIX?= /usr/local
 BINDIR?= $(PREFIX)/bin
 
 CC=gcc
