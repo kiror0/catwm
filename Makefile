@@ -10,7 +10,10 @@ CC=gcc
 
 all: $(EXEC)
 
-catwm: catwm.o
+config.h: config.h.def
+	cp config.h.def config.h
+
+catwm: config.h catwm.o
 	$(CC) $(LDFLAGS) -Os -o $@ $+ $(LDADD)
 
 install: all
